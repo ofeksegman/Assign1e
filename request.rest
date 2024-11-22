@@ -21,7 +21,7 @@ PUT http://localhost:3000/posts/674060662936d54632477a58
 Content-Type: application/json
 {
     "title": "newTitle",
-     "SenderId": "55", 
+    "SenderId": "55",
     "content": "beautiful day"
 }
 
