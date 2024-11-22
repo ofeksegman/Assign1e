@@ -1,27 +1,14 @@
-const post=require('../model/post');
+const PostModel =require('../model/post');
 const createPost = async (req, res) => {
     const postBody = req.body;
     try {
-      const post = await PostModel.create(postBody);
-      res.status(201).send(post);
+    const post = await PostModel.create(postBody);
+    res.status(201).send(post);
     } catch (error) {
-      res.status(400).send(error.message);
+    res.status(400).send(error.message);
     }
-  };
+};
 
-const createPost2=async(req,res)=>{
-    try{
-        const {title,description}=req.body;
-        const post=await Post.create({
-            title,
-            description,
-            user:req.user._id
-        });
-        res.status(201).json({post});
-    }catch(err){
-        res.status(500).json({message:err.message});
-    }
-}
-
-module.exports = createPost;
-
+module.exports = {
+    createPost
+};
