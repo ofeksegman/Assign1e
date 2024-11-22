@@ -19,15 +19,16 @@ GET http://localhost:3000/posts/?SenderId=55
 ###
 PUT http://localhost:3000/posts/674060662936d54632477a58
 Content-Type: application/json
+
 {
-    "title": "newTitle",
-     "SenderId": "55", 
+    "title": "ThanksDor",
+    "SenderId": "55", 
     "content": "beautiful day"
 }
 
 ###
 POST http://localhost:3000/createComment
-Content-Type: application/json
+ Content-Type: application/json
 
 {
     "comment": "Hello", 
