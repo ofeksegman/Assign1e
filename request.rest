@@ -60,3 +60,8 @@ Content-Type: application/json
 ###
 DELETE  http://localhost:3000/comments/6743515ea31782524c77a21c
 
+
+
+
+###
+GET http://localhost:3000/comments/?postId=1234

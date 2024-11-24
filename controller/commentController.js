@@ -10,12 +10,19 @@ const createComment = async (req, res) => {
 }
 
 const getAllComments= async (req, res) => {
+    const filter= req.query.postId;
+    if (filter){
+        const comment=await commentModel.find({postId:filter});
+        res.send(comment);
+    }
+    else{
     try {
         const comments = await commentModel.find();
         res.status(200).send(comments);
         } catch (error) {
         res.status(400).send(error.message);
         }
+    }
     };
 
 const updateComment= async (req, res) => {
