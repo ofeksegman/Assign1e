@@ -33,7 +33,30 @@ Content-Type: application/json
 
 
 {
-    "postId": "1234", 
+    "postId": "674060662936d54632477a58", 
     "content": "Hello", 
     "username": "natan"
 }
+
+
+###
+
+GET http://localhost:3000/comments
+
+
+
+###
+PUT http://localhost:3000/comments/674353f402429aaee563dae3
+Content-Type: application/json
+
+
+{
+    "postId": "674060662936d54632477a58", 
+    "content": "Hi", 
+    "username": "ofek"
+}
+
+
+###
+DELETE  http://localhost:3000/comments/6743515ea31782524c77a21c
+
