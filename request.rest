@@ -28,11 +28,12 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/createComment
- Content-Type: application/json
+POST http://localhost:3000/comments
+Content-Type: application/json
+
 
 {
-    "comment": "Hello", 
-    "postId": "674060662936d54632477a58", 
+    "postId": "1234", 
+    "content": "Hello", 
     "username": "natan"
 }

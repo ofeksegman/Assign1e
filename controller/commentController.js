@@ -1,15 +1,11 @@
-const commentModel = require('../models/commentModel');
+const commentModel = require('../model/comment');
 const createComment = async (req, res) => {
-    const comment = new commentModel({
-        postId: req.body.postId,
-        content: req.body.content,
-        username: req.body.username
-    });
+    const commentBody = req.body;
     try {
-        const savedComment = await comment.save();
-        res.json(savedComment);
-    } catch (err) {
-        res.json({ message: err });
+        const savedComment = await commentModel.create(commentBody);
+        res.status(201).send(savedComment);
+    } catch (error) {
+        res.status(400).send(error.message);
     }
 }
 module.exports = { 

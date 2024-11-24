@@ -26,3 +26,6 @@ app.listen(port, () => {
 const postsRoute = require("./routes/postRoutes");
 app.use("/posts", postsRoute);
 
+const commentsRoute = require("./routes/commentRoutes");
+app.use("/comments", commentsRoute);
+
