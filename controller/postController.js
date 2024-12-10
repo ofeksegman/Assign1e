@@ -64,17 +64,7 @@ const updatePost = async (req, res) => {
 };
 
 
-const updatePost2= async (req, res) => {
-    const filter = req.query.id;
-    try{
-    if(filter){
-        const post = await PostModel.findByIdAndUpdate (filter, req.body, { new: true });
-    }
-}
-    catch (error) {
-        res.status(400).send(error.message);
-        }
-    };
+
 
 module.exports = {
     createPost,
